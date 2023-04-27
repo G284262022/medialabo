@@ -25,7 +25,7 @@ div#top {
 	grid-auto-rows: 200px 200px;
 	grid-gap: 10px;
 	padding: 5px 5px 5px 5px;
-	width: 1024px;
+	width: 2000px;
 }
 
 div#top > div {
@@ -39,7 +39,7 @@ div#sub {
 	grid-auto-rows: 250px 250px;
 	grid-gap: 10px;
 	padding: 5px 5px 5px 5px;
-	width: 1024px;
+	width: 2000px;
 }
 
 div#sub > div {
