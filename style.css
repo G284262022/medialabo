@@ -1,0 +1,16 @@
+p {
+    color: #33569c;
+}
+
+a {
+    color: blueviolet;
+}
+
+p.title {
+    color: black;
+}
+
+h1 {
+    color: black;
+	text-shadow: rgb(253, 0, 0) 5px 5px 10px;
+}
