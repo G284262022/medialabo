@@ -48,4 +48,3 @@ div.insertAdjacentElement('beforeend', beeLink);	// a要素を div要素の中�
 //// 要素の削除
 let w = document.querySelector('li#whale');			// li#whale 要素を検索
 w.remove();											// 要素を削除
-
