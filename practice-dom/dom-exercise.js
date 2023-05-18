@@ -27,12 +27,6 @@ let p4 = document.createElement('p');
 p4.insertAdjacentElement('afterend', p3);
 p2.insertAdjacentElement('afterend', p4);
 
-let img1 = document.createElement('img');
-img1.textContent = ''; 
-img1.setAttribute('src', 'taro.png');
-let p3 = document.createElement('p');
-p3.insertAdjacentElement('afterend', img1);
-p2.insertAdjacentElement('afterend', p3);
 // 練習4-4 箇条書き削除プログラム
 let p6 = document.querySelectorAll('li') ;
 for(let w of p6){
