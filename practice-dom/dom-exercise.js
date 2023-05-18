@@ -48,4 +48,21 @@ for(let w of p9){
 	w.remove();
   } 
 // 練習4-5 箇条書き追加プログラム
+let p10 = document.querySelectorAll('ul#location') ;
+let p11,p12;
 
+for(let {name,lat,lng} of data){
+	p11 = document.createElement('li');
+    p12.textContent = name + '... 緯度:' + lat + ', 経度:' + lng;
+	p11.insertAdjacentElement('afterend', p12);
+}
+
+/*
+for(let {name,lat,lng} of data){
+	console.log(name + '... 緯度:' + lat + ', 経度:' + lng);
+}
+
+let p11 = document.createElement('li');
+p11.textContent = 'hahaha';
+
+*/
