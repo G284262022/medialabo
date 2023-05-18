@@ -18,10 +18,14 @@ let p1 = document.querySelector('h2#ex42');
 let p = document.createElement('p');
 p.textContent = '写真表と都市の緯度経度のページです';
 p1.insertAdjacentElement('afterend', p);
-p1.style.textEmphasis = 'sesame green';
+p.style.textEmphasis = 'sesame green';
 // 練習4-3 写真表作成プログラム
-
-
+let p2 = document.querySelector('div#phototable');
+let p3 = document.createElement('img');
+p3.setAttribute('src', 'taro.png');
+let p4 = document.createElement('p');
+p4.insertAdjacentElement('afterend', p3);
+p2.insertAdjacentElement('afterend', p4);
 // 練習4-4 箇条書き削除プログラム
 
 
