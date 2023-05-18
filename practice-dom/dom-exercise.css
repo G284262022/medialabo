@@ -10,7 +10,7 @@ div#phototable > p {
 	
 }
 
-div#phototable > p > img {
+div#phototable > img {
 	display: block;
 	width: 100%;
 }
