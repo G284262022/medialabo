@@ -24,9 +24,9 @@ let p2 = document.querySelector('div#phototable');
 let p3 = document.createElement('img');
 p3.setAttribute('src', 'taro.png');
 let p4 = document.createElement('p');
-p2.insertAdjacentElement('afterend', p4); 
-p3.textContent = ''; 
-p4.insertAdjacentElement('afterend', p3); 
+p2.insertAdjacentElement('afterend', p4);
+p3.textContent = '';
+p4.insertAdjacentElement('afterend', p3);
 
 let p5 = document.createElement('img');
 p5.setAttribute('src', 'jiro.png');
@@ -42,18 +42,9 @@ p2.insertAdjacentElement('afterend', p8);
 p7.textContent = ''; 
 p8.insertAdjacentElement('afterend', p7);
 
-/*
-p2 = document.querySelector('div#phototable');
-p5 = document.createElement('img');
-p5.setAttribute('src', 'jiro.png');
-p6 = document.createElement('p');
-p2.insertAdjacentElement('afterend', p6); 
-p5.textContent = ''; 
-p6.insertAdjacentElement('afterend', p5); 
-*/
 // 練習4-4 箇条書き削除プログラム
 let p9 = document.querySelectorAll('li') ;
-for(let w of p6){
+for(let w of p9){
 	w.remove();
   } 
 // 練習4-5 箇条書き追加プログラム
