@@ -22,14 +22,19 @@ function hantei() {
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   kaisu = kaisu + 1;
-  console.log(kaisu + "回目の予想: " + yoso);
+  //console.log(kaisu + "回目の予想: " + yoso);
+  let p1 = document.querySelector('span#kaisu');
+  p1.textContent = kaisu;
+  let p2 = document.querySelector('span#answer');
+  p2.textContent = yoso;
+  let p3 = document.querySelector('p#result');
   if (kaisu > 4){
-    console.log("答えは " + kotae + " でした．すでにゲームは終わっています");
+    p3.textContent = "答えは " + kotae + " でした．すでにゲームは終わっています";
   } else if (kotae === yoso){
-    console.log("正解です．おめでとう!");
+    p3.textContent = "正解です．おめでとう!";
   } else if (kotae > yoso){
-    console.log("まちがい．答えはもっと大きいですよ");
+    p3.textContent = "まちがい．答えはもっと大きいですよ";
   } else{
-    console.log("まちがい．答えはもっと小さいですよ");
+    p3.textContent = "まちがい．答えはもっと小さいですよ";
   }
 }
