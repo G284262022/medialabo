@@ -82,6 +82,6 @@ let data = {
   /////////////////// 課題3-2 はここから書き始めよう
   
 for(let {title} of data.list.g1){
-  let p1 = document.querySelector('p#4-2');
+  let p1 = document.querySelector('p#title');
   p1.textContent = title;
 }
