@@ -27,11 +27,11 @@ function hantei() {
   let p3 = document.querySelector('p#result');
   if (kaisu > 4){
     p3.textContent = "答えは " + kotae + " でした．すでにゲームは終わっています";
-  } else if (kotae === yoso){
-    p3.textContent = "正解です．おめでとう!";
   } else if (kotae > yoso){
     p3.textContent = "まちがい．答えはもっと大きいですよ";
-  } else{
+  } else if (kotae < yoso){
     p3.textContent = "まちがい．答えはもっと小さいですよ";
+  } else{
+    p3.textContent = "正解です．おめでとう!";
   }
 }
