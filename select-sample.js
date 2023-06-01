@@ -8,7 +8,7 @@ function showSelectResult() {
     let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
     let o = os.item(idx);       // os の idx 番目の要素
   
-    let s1 = document.querySelector('select#service');
+    let s1 = document.querySelector('select#genre');
     let idx1 = s.selectedIndex;  // idx 番目の option が選択された
   
     let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
