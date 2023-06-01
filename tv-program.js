@@ -162,6 +162,11 @@ function showResult(resp) {
       console.log(title);
     }
   }
+  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o = os.item(idx);       // os の idx 番目の要素
+
+  let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o1 = os1.item(idx1);       // os の idx 番目の要素
   let ban = document.querySelector('th#kyoku');
   ban.textContent = o.textContent;
   let daimei = document.querySelector('th#title');
