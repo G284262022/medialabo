@@ -152,9 +152,15 @@ function showResult(resp) {
 
   // data をコンソールに出力
   console.log(data);
-
+  
+  if (service === 'g1'){
   for(let {title} of data.list.g1){
     console.log(title);
+  }}
+  else {
+    for(let {title} of data.list.e1){
+      console.log(title);
+    }
   }
 }
 
