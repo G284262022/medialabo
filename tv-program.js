@@ -153,8 +153,9 @@ function showResult(resp) {
   // data をコンソールに出力
   console.log(data);
 
-  // data.x を出力
-  console.log(data.x);
+  for(let {title} of data.list.g1){
+    console.log(title);
+  }
 }
 
 // 通信エラーが発生した時の処理
