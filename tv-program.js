@@ -89,7 +89,7 @@ for(let {title} of data.list.g1){
 
 
 let p = document.querySelector('button#request');
-b.addEventListener('click', showSelectResult);
+p.addEventListener('click', showSelectResult);
 
 function showSelectResult() {
   let s = document.querySelector('select#service');
