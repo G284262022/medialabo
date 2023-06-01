@@ -94,32 +94,27 @@ p.addEventListener('click', showSelectResult);
 function showSelectResult() {
   let s = document.querySelector('select#service');
   let idx = s.selectedIndex;  // idx 番目の option が選択された
-  let service;
   var ss = ['','g1','g2'];
-  let oss = ss[idx];
-  if(oss === 1){
-    service = 'g1';
-  } else if(oss === 2){
-    service = 'e1';
-  }
-  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
-  let o = os.item(idx);       // os の idx 番目の要素
+  let service = ss[idx];
 
-  let s1 = document.querySelector('select#service');
+  let s1 = document.querySelector('select#genre');
   let idx1 = s1.selectedIndex;  // idx 番目の option が選択された
   var sss = ['','0000','0100','0205','0300','0409','0502','0600','0700','0800','0903','1000','1100'];
   let genre = sss[idx1];
+    
+  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o = os.item(idx);       // os の idx 番目の要素
 
   let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
   let o1 = os1.item(idx1);       // os の idx 番目の要素
 
   console.log('選択された ' + idx + ' 番目の option の情報:');
   console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
-  console.log('  textContent='+o.textContent);
+  console.log(' service='+o.textContent);
 
   console.log('選択された ' + idx1 + ' 番目の option の情報:');
   console.log('  value=' + o1.getAttribute('value'));  // id 属性を表示
-  console.log('  textContent='+o1.textContent);
+  console.log(' genre='+o1.textContent);
 
   let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + service + '-' + genre + '-j.json';
 
