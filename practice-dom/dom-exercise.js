@@ -13,7 +13,7 @@ let data = [
 ];
 //// 注意: 以上は編集しないこと!
 
-// 練習4-2 メッセージ追加プログラム
+// 練習4-2 メッセージ追加プログラ¥
 let p1 = document.querySelector('h2#ex42');
 let p = document.createElement('p');
 p.textContent = '写真表と都市の緯度経度のページです';
@@ -53,7 +53,7 @@ let p10 = document.querySelectorAll('ul#location') ;
 for(let {name,lat,lng} of data){
 	let p11 = document.createElement('li');
     p11.textContent = name + '... 緯度:' + lat + ', 経度:' + lng;
-	p11.insertAdjacentElement('afterbegin', p10);
+	p10.appendChild(p11);
 }
 
 /*
