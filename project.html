@@ -9,8 +9,28 @@
    </head>
    <body>
     <p id="title"></p>
-    <label for="bangumi">NHKの番組表: </label>
-	<input type="search" name="bangumi" size="6">
+    <label for="bangumi">チャンネル </label>
+	<select name="service" id="service">
+        <option value="">選んでください</option>
+        <option value="sougou">NHK総合1</option>
+        <option value="etere">Eテレ1</option>
+    </select>
+    <label for="bangumi">ジャンル </label>
+    <select name="genre" id="genre">
+        <option value="">選んでください</option>
+        <option value="0000">ニュース・報道</option>
+        <option value="0100">スポーツ</option>
+        <option value="0205">情報・ワイドショー</option>
+        <option value="0300">ドラマ</option>
+        <option value="0409">音楽</option>
+        <option value="0502">バラエティ</option>
+        <option value="0600">映画</option>
+        <option value="0700">アニメ</option>
+        <option value="0800">ドキュメンタリー・教養</option>
+        <option value="0903">劇場・公演</option>
+        <option value="1000">趣味・教育</option>
+        <option value="1100">福祉</option>
+    </select>
 	<button id="request">検索</button>
     
       <table>
