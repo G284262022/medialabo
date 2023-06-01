@@ -20,13 +20,13 @@ p.textContent = '写真表と都市の緯度経度のページです';
 p1.insertAdjacentElement('afterend', p);
 p.style.textEmphasis = 'sesame green';
 // 練習4-3 写真表作成プログラム
-let p2 = document.querySelector('div#phototable');
-let p3 = document.createElement('img');
-p3.setAttribute('src', 'taro.png');
-let p4 = document.createElement('p');
-p2.insertAdjacentElement('afterbegin', p4);
-p3.textContent = '';
-p4.insertAdjacentElement('afterbegin', p3);
+
+let p7 = document.createElement('img');
+p7.setAttribute('src', 'hanako.png');
+let p8 = document.createElement('p');
+p2.insertAdjacentElement('afterbegin', p8); 
+p7.textContent = ''; 
+p8.insertAdjacentElement('afterbegin', p7);
 
 let p5 = document.createElement('img');
 p5.setAttribute('src', 'jiro.png');
@@ -35,12 +35,13 @@ p2.insertAdjacentElement('afterbegin', p6);
 p5.textContent = ''; 
 p6.insertAdjacentElement('afterbegin', p5); 
 
-let p7 = document.createElement('img');
-p7.setAttribute('src', 'hanako.png');
-let p8 = document.createElement('p');
-p2.insertAdjacentElement('afterbegin', p8); 
-p7.textContent = ''; 
-p8.insertAdjacentElement('afterbegin', p7);
+let p2 = document.querySelector('div#phototable');
+let p3 = document.createElement('img');
+p3.setAttribute('src', 'taro.png');
+let p4 = document.createElement('p');
+p2.insertAdjacentElement('afterbegin', p4);
+p3.textContent = '';
+p4.insertAdjacentElement('afterbegin', p3);
 
 // 練習4-4 箇条書き削除プログラム
 let p9 = document.querySelectorAll('li') ;
