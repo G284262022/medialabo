@@ -162,6 +162,10 @@ function showResult(resp) {
       console.log(title);
     }
   }
+  let ban = document.querySelector('th#kyoku');
+  ban.textContent = o.textContent;
+  let daimei = document.querySelector('th#title');
+  daimei.textContent = o1.textContent;
 }
 
 // 通信エラーが発生した時の処理
