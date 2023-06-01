@@ -153,6 +153,19 @@ function showResult(resp) {
   // data をコンソールに出力
   console.log(data);
   
+  let s = document.querySelector('select#service');
+  let idx = s.selectedIndex;  // idx 番目の option が選択された
+  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o = os.item(idx);       // os の idx 番目の要素
+
+  var ss = ['','g1','e1'];
+  let service = ss[idx];
+
+  let s1 = document.querySelector('select#genre');
+  let idx1 = s1.selectedIndex;  // idx 番目の option が選択された
+  let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o1 = os1.item(idx1);       // os の idx 番目の要素
+
   if (service === 'g1'){
     for(let {title} of data.list.g1){
       console.log(title);
@@ -162,16 +175,6 @@ function showResult(resp) {
       console.log(title);
     }
   }
-  let s = document.querySelector('select#service');
-  let idx = s.selectedIndex;  // idx 番目の option が選択された
-  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
-  let o = os.item(idx);       // os の idx 番目の要素
-
-  let s1 = document.querySelector('select#genre');
-  let idx1 = s1.selectedIndex;  // idx 番目の option が選択された
-  let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
-  let o1 = os1.item(idx1);       // os の idx 番目の要素
-  
   let ban = document.querySelector('th#kyoku');
   ban.textContent = o.textContent;
   let daimei = document.querySelector('th#title');
