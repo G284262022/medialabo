@@ -94,7 +94,7 @@ p.addEventListener('click', showSelectResult);
 function showSelectResult() {
   let s = document.querySelector('select#service');
   let idx = s.selectedIndex;  // idx 番目の option が選択された
-  var ss = ['','g1','g2'];
+  var ss = ['','g1','e1'];
   let service = ss[idx];
 
   let s1 = document.querySelector('select#genre');
