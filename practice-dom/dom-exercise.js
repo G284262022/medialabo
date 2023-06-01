@@ -49,10 +49,10 @@ for(let w of p9){
 	w.remove();
   } 
 // 練習4-5 箇条書き追加プログラム
-let p10 = document.querySelectorAll('ul#location') ;
+let p10 = document.getElementById('ul#location') ;
 
 for(let {name,lat,lng} of data){
-	let p11 = document.createElement('li');
+	var p11 = document.createElement('li');
     p11.textContent = name + '... 緯度:' + lat + ', 経度:' + lng;
 	p10.appendChild(p11);
 }
