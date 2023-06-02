@@ -159,16 +159,19 @@ function showResult(resp) {
   let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
   let o1 = os1.item(idx1);       // os の idx 番目の要素
 
+  let count = 0;
   if (service === 'g1'){
     for(let {title} of data.list.g1){
       console.log(title);
+      count = count + 1;
     }
-    console.log(g1.length);
+    console.log(count);
   } else if(service === 'e1'){
     for(let {title} of data.list.e1){
       console.log(title);
+      count = count + 1;
     }
-    console.log(e1.length);
+    console.log(count);
   }
   console.log(data.length);
   let ban = document.querySelector('th#kyoku');
