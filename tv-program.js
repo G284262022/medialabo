@@ -196,7 +196,7 @@ function showResult(resp) {
     tblBody.appendChild(row);
   }
 
-  console.log(data.length());
+  console.log(data.length);
 }
 
 // 通信エラーが発生した時の処理
