@@ -81,14 +81,7 @@ let data = {
   
   /////////////////// 課題3-2 はここから書き始めよう
   
-for(let {title} of data.list.g1){
-  let p1 = document.querySelector('p#title');
-  p1.textContent = title;
-}
-
-
-
-let p = document.querySelector('button#request');
+  let p = document.querySelector('button#request');
 p.addEventListener('click', showSelectResult);
 
 function showSelectResult() {
@@ -175,10 +168,37 @@ function showResult(resp) {
       console.log(title);
     }
   }
+  console.log(data.length);
   let ban = document.querySelector('th#kyoku');
   ban.textContent = o.textContent;
   let daimei = document.querySelector('th#title');
   daimei.textContent = o1.textContent;
+
+  // <table> 要素と <tbody> 要素を作成
+  //var tbl = document.createElement("table");
+  var tblBody = document.querySelector('tbody#hyou');
+
+  // すべてのセルを作成
+  for (var i = 0; i < 2; i++) {
+    // 表の行を作成
+    var row = document.createElement("tr");
+
+    for (var j = 0; j < 2; j++) {
+      // <td> 要素とテキストノードを作成し、テキストノードを
+      // <td> の内容として、その <td> を表の行の末尾に追加
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode(i+" 行目、 "+j+" 列目のセル");
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+    // 表の本体の末尾に行を追加
+    tblBody.appendChild(row);
+  }
+
+  // <tbody> を <table> の中に追加
+  tbl.appendChild(tblBody);
+  console.log(data.length());
 }
 
 // 通信エラーが発生した時の処理
