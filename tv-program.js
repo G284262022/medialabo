@@ -233,7 +233,11 @@ function showResult(resp) {
     }
   }
 
-  var youso = [youso_t, youso_s, youso_e];
+  var youso;
+  for (var k = 0; k < count; k++){
+    youso = [youso_t[k], youso_s[k], youso_e[k]];
+  }
+  //var youso = [youso_t, youso_s, youso_e];
   // すべてのセルを作成
   for (var i = 0; i < count+1; i++) {
     if (i === 0){
