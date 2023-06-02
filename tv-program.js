@@ -196,8 +196,6 @@ function showResult(resp) {
     tblBody.appendChild(row);
   }
 
-  // <tbody> を <table> の中に追加
-  tbl.appendChild(tblBody);
   console.log(data.length());
 }
 
