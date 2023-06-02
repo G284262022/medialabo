@@ -192,45 +192,33 @@ function showResult(resp) {
   var youso_t = new Array(count);
   var youso_s = new Array(count);
   var youso_e = new Array(count);
+  let k1 = 0;
 
   if (service === 'g1'){
-    for(var k = 0; k < count; k++){
       for(let {title} of data.list.g1){
-        youso_t[k] = title;
+        youso_t[k1] = title;
+        k1++;
       }
-    }
-  } else if(service === 'e1'){
-    for(var k = 0; k < count; k++){
-      for(let {title} of data.list.e1){
-        youso_t[k] = title;
-      }
-    }
-  }
-  if (service === 'g1'){
-    for(var k = 0; k < count; k++){
+      k1 = 0;
       for(let {start_time} of data.list.g1){
-        youso_s[k] = start_time;
+        youso_s[k1] = start_time;
       }
-    }
-  } else if(service === 'e1'){
-    for(var k = 0; k < count; k++){
-      for(let {start_time} of data.list.e1){
-        youso_s[k] = start_time;
-      }
-    }
-  }
-  if (service === 'g1'){
-    for(var k = 0; k < count; k++){
+      k1 = 0;
       for(let {end_time} of data.list.g1){
-        youso_e[k] = end_time;
+        youso_e[k1] = end_time;
       }
-    }
   } else if(service === 'e1'){
-    for(var k = 0; k < count; k++){
-      for(let {end_time} of data.list.e1){
-        youso_e[k] = end_time;
+      for(let {title} of data.list.e1){
+        youso_t[k1] = title;
       }
-    }
+      k1 = 0;
+      for(let {start_time} of data.list.e1){
+        youso_s[k1] = start_time;
+      }
+      k1 = 0;
+      for(let {end_time} of data.list.e1){
+        youso_e[k1] = end_time;
+      }
   }
 
   var youso;
