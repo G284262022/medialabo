@@ -163,10 +163,12 @@ function showResult(resp) {
     for(let {title} of data.list.g1){
       console.log(title);
     }
+    console.log(g1.length);
   } else if(service === 'e1'){
     for(let {title} of data.list.e1){
       console.log(title);
     }
+    console.log(e1.length);
   }
   console.log(data.length);
   let ban = document.querySelector('th#kyoku');
@@ -183,7 +185,7 @@ function showResult(resp) {
     // 表の行を作成
     var row = document.createElement("tr");
 
-    for (var j = 0; j < 2; j++) {
+    for (var j = 0; j < 3; j++) {
       // <td> 要素とテキストノードを作成し、テキストノードを
       // <td> の内容として、その <td> を表の行の末尾に追加
       var cell = document.createElement("td");
@@ -196,7 +198,6 @@ function showResult(resp) {
     tblBody.appendChild(row);
   }
 
-  console.log(data.length);
 }
 
 // 通信エラーが発生した時の処理
