@@ -189,6 +189,7 @@ function showResult(resp) {
   var tbl = document.querySelector('table');
   var tblBody = document.createElement("tbody");
 
+  var youso = new [count][3];
   // すべてのセルを作成
   for (var i = 0; i < count+1; i++) {
     if (i === 0){
@@ -203,6 +204,47 @@ function showResult(resp) {
         row.appendChild(cell);
       }
     } else {
+
+      if (service === 'g1'){
+        for(var k = 0; k < 3; k++){
+          for(let {title} of data.list.g1){
+            youso[k][0] = title;
+          }
+        }
+      } else if(service === 'e1'){
+        for(var k = 0; k < 3; k++){
+          for(let {title} of data.list.e1){
+            youso[k][0] = title;
+          }
+        }
+      }
+      if (service === 'g1'){
+        for(var k = 0; k < 3; k++){
+          for(let {start_time} of data.list.g1){
+            youso[k][1] = start_time;
+          }
+        }
+      } else if(service === 'e1'){
+        for(var k = 0; k < 3; k++){
+          for(let {start_time} of data.list.e1){
+            youso[k][1] = start_time;
+          }
+        }
+      }
+      if (service === 'g1'){
+        for(var k = 0; k < 3; k++){
+          for(let {end_time} of data.list.g1){
+            youso[k][2] = end_time;
+          }
+        }
+      } else if(service === 'e1'){
+        for(var k = 0; k < 3; k++){
+          for(let {end_time} of data.list.e1){
+            youso[k][2] = end_time;
+          }
+        }
+      }
+
       // 表の行を作成
       var row = document.createElement("tr");
 
@@ -210,7 +252,7 @@ function showResult(resp) {
         // <td> 要素とテキストノードを作成し、テキストノードを
         // <td> の内容として、その <td> を表の行の末尾に追加
         var cell = document.createElement("td");
-        var cellText = document.createTextNode(i+" 行目、 "+j+" 列目のセル");
+        var cellText = document.createTextNode(youso[i-1][j]);
         cell.appendChild(cellText);
         row.appendChild(cell);
       }
