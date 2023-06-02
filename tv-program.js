@@ -179,27 +179,50 @@ function showResult(resp) {
   let daimei = document.querySelector('th#title');
   daimei.textContent = o1.textContent;
 
+  let p9 = document.querySelector('table') ;
+  p9.remove();
+
+  // body の参照を取得
+  var body = document.getElementsByTagName("body")[0];
+  
   // <table> 要素と <tbody> 要素を作成
-  //var tbl = document.createElement("table");
-  var tblBody = document.querySelector('tbody#hyou');
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
 
   // すべてのセルを作成
-  for (var i = 0; i < 2; i++) {
-    // 表の行を作成
-    var row = document.createElement("tr");
+  for (var i = 0; i < count+1; i++) {
+    if (i === 0){
+      var row = document.createElement("tr");
+      for (var j = 0; j < 3; j++) {
+        // <td> 要素とテキストノードを作成し、テキストノードを
+        // <td> の内容として、その <td> を表の行の末尾に追加
+        var gyou = ["番組名", "開始時間", "終了時間"];
+        var cell = document.createElement("td");
+        var cellText = document.createTextNode(gyou[j]);
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
+    } else {
+      // 表の行を作成
+      var row = document.createElement("tr");
 
-    for (var j = 0; j < 3; j++) {
-      // <td> 要素とテキストノードを作成し、テキストノードを
-      // <td> の内容として、その <td> を表の行の末尾に追加
-      var cell = document.createElement("td");
-      var cellText = document.createTextNode(i+" 行目、 "+j+" 列目のセル");
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+      for (var j = 0; j < 3; j++) {
+        // <td> 要素とテキストノードを作成し、テキストノードを
+        // <td> の内容として、その <td> を表の行の末尾に追加
+        var cell = document.createElement("td");
+        var cellText = document.createTextNode(i+" 行目、 "+j+" 列目のセル");
+        cell.appendChild(cellText);
+        row.appendChild(cell);
+      }
     }
-
     // 表の本体の末尾に行を追加
     tblBody.appendChild(row);
   }
+
+  // <tbody> を <table> の中に追加
+  tbl.appendChild(tblBody);
+  // <table> を <body> の中に追加
+  body.appendChild(tbl);
 
 }
 
