@@ -189,7 +189,51 @@ function showResult(resp) {
   var tbl = document.querySelector('table');
   var tblBody = document.createElement("tbody");
 
-  var youso = new [count][3];
+  var youso_t = new Array(count);
+  var youso_s = new Array(count);
+  var youso_e = new Array(count);
+
+  if (service === 'g1'){
+    for(var k = 0; k < count; k++){
+      for(let {title} of data.list.g1){
+        youso_t[k] = title;
+      }
+    }
+  } else if(service === 'e1'){
+    for(var k = 0; k < count; k++){
+      for(let {title} of data.list.e1){
+        youso_t[k] = title;
+      }
+    }
+  }
+  if (service === 'g1'){
+    for(var k = 0; k < count; k++){
+      for(let {start_time} of data.list.g1){
+        youso_s[k] = start_time;
+      }
+    }
+  } else if(service === 'e1'){
+    for(var k = 0; k < count; k++){
+      for(let {start_time} of data.list.e1){
+        youso_s[k] = start_time;
+      }
+    }
+  }
+  if (service === 'g1'){
+    for(var k = 0; k < count; k++){
+      for(let {end_time} of data.list.g1){
+        youso_e[k] = end_time;
+      }
+    }
+  } else if(service === 'e1'){
+    for(var k = 0; k < count; k++){
+      for(let {end_time} of data.list.e1){
+        youso_e[k] = end_time;
+      }
+    }
+  }
+
+  var youso = [youso_t, youso_s, youso_e];
   // すべてのセルを作成
   for (var i = 0; i < count+1; i++) {
     if (i === 0){
@@ -204,46 +248,6 @@ function showResult(resp) {
         row.appendChild(cell);
       }
     } else {
-
-      if (service === 'g1'){
-        for(var k = 0; k < 3; k++){
-          for(let {title} of data.list.g1){
-            youso[k][0] = title;
-          }
-        }
-      } else if(service === 'e1'){
-        for(var k = 0; k < 3; k++){
-          for(let {title} of data.list.e1){
-            youso[k][0] = title;
-          }
-        }
-      }
-      if (service === 'g1'){
-        for(var k = 0; k < 3; k++){
-          for(let {start_time} of data.list.g1){
-            youso[k][1] = start_time;
-          }
-        }
-      } else if(service === 'e1'){
-        for(var k = 0; k < 3; k++){
-          for(let {start_time} of data.list.e1){
-            youso[k][1] = start_time;
-          }
-        }
-      }
-      if (service === 'g1'){
-        for(var k = 0; k < 3; k++){
-          for(let {end_time} of data.list.g1){
-            youso[k][2] = end_time;
-          }
-        }
-      } else if(service === 'e1'){
-        for(var k = 0; k < 3; k++){
-          for(let {end_time} of data.list.e1){
-            youso[k][2] = end_time;
-          }
-        }
-      }
 
       // 表の行を作成
       var row = document.createElement("tr");
