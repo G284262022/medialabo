@@ -179,14 +179,14 @@ function showResult(resp) {
   let daimei = document.querySelector('th#title');
   daimei.textContent = o1.textContent;
 
-  let p9 = document.querySelector('table') ;
+  let p9 = document.querySelector('tbody') ;
   p9.remove();
 
   // body の参照を取得
   var body = document.getElementsByTagName("body")[0];
   
   // <table> 要素と <tbody> 要素を作成
-  var tbl = document.createElement("table");
+  var tbl = document.querySelector('table');
   var tblBody = document.createElement("tbody");
 
   // すべてのセルを作成
