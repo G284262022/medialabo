@@ -173,6 +173,29 @@ function showResult(resp) {
     }
     console.log(count);
   }
+  if (service === 'g1'){
+    for(let {start_time} of data.list.g1){
+      console.log(start_time);
+    }
+  } else if(service === 'e1'){
+    for(let {start_time} of data.list.e1){
+      console.log(start_time);
+    }
+  }
+  let counts = 0;
+  if (service === 'g1'){
+    for(let {end_time} of data.list.g1){
+      console.log(end_time);
+      counts = counts + 1;
+    }
+    console.log(count);
+  } else if(service === 'e1'){
+    for(let {end_time} of data.list.e1){
+      console.log(end_time);
+      counts = counts + 1;
+    }
+    console.log(count);
+  }
   console.log(data.length);
   let ban = document.querySelector('th#kyoku');
   ban.textContent = o.textContent;
@@ -181,7 +204,7 @@ function showResult(resp) {
 
   let p9 = document.querySelector('tbody') ;
   p9.remove();
-
+/*
   // body の参照を取得
   var body = document.getElementsByTagName("body")[0];
   
@@ -261,7 +284,7 @@ function showResult(resp) {
   tbl.appendChild(tblBody);
   // <table> を <body> の中に追加
   body.appendChild(tbl);
-
+*/
 }
 
 // 通信エラーが発生した時の処理
