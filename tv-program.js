@@ -218,31 +218,31 @@ function showResult(resp) {
 
   if (service === 'g1'){
       for(let {title} of data.list.g1){
-        youso_t[k1] = title;
+        youso_t = title;
         k1++;
       }
       console.log(youso_t);
       k1 = 0;
       for(let {start_time} of data.list.g1){
-        youso_s[k1] = start_time;
+        youso_s = start_time;
       }
       k1 = 0;
       for(let {end_time} of data.list.g1){
-        youso_e[k1] = end_time;
+        youso_e = end_time;
       }
       console.log(youso_s);
   } else if(service === 'e1'){
       for(let {title} of data.list.e1){
-        youso_t[k1] = title;
+        youso_t = title;
       }
       console.log(youso_t);
       k1 = 0;
       for(let {start_time} of data.list.e1){
-        youso_s[k1] = start_time;
+        youso_s = start_time;
       }
       k1 = 0;
       for(let {end_time} of data.list.e1){
-        youso_e[k1] = end_time;
+        youso_e = end_time;
       }
       console.log(youso_s);
   }
