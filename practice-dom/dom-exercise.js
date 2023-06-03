@@ -52,17 +52,8 @@ for(let w of p9){
 let p10 = document.getElementById('ul#location') ;
 
 for(let {name,lat,lng} of data){
-	var p11 = document.createElement('li');
-    p11.textContent = name + '... 緯度:' + lat + ', 経度:' + lng;
-	p10.appendChild(p11);
-}
-
-/*
-for(let {name,lat,lng} of data){
 	console.log(name + '... 緯度:' + lat + ', 経度:' + lng);
 }
 
 let p11 = document.createElement('li');
 p11.textContent = 'hahaha';
-
-*/
