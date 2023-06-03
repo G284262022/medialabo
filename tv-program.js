@@ -281,7 +281,7 @@ function showResult(resp) {
         // <td> 要素とテキストノードを作成し、テキストノードを
         // <td> の内容として、その <td> を表の行の末尾に追加
         var cell = document.createElement("td");
-        var cellText = document.createTextNode(youso[i-1][j]);
+        var cellText = document.createTextNode(youso[j][i-1]);
         cell.appendChild(cellText);
         row.appendChild(cell);
       }
