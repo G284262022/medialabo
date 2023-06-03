@@ -172,7 +172,7 @@ function showResult(resp) {
       count = count + 1;
     }
     console.log(count);
-  }
+  }/*
   if (service === 'g1'){
     for(let {start_time} of data.list.g1){
       console.log(start_time);
@@ -195,8 +195,7 @@ function showResult(resp) {
       counts = counts + 1;
     }
     console.log(count);
-  }
-  console.log(data.length);
+  }*/
   let ban = document.querySelector('th#kyoku');
   ban.textContent = o.textContent;
   let daimei = document.querySelector('th#title');
@@ -204,7 +203,7 @@ function showResult(resp) {
 
   let p9 = document.querySelector('tbody') ;
   p9.remove();
-/*
+
   // body の参照を取得
   var body = document.getElementsByTagName("body")[0];
   
@@ -230,6 +229,7 @@ function showResult(resp) {
       for(let {end_time} of data.list.g1){
         youso_e[k1] = end_time;
       }
+      console.log(youso_s);
   } else if(service === 'e1'){
       for(let {title} of data.list.e1){
         youso_t[k1] = title;
@@ -242,8 +242,9 @@ function showResult(resp) {
       for(let {end_time} of data.list.e1){
         youso_e[k1] = end_time;
       }
+      console.log(youso_s);
   }
-
+  /*
   var youso;
   for (var k = 0; k < count; k++){
     youso = [youso_t[k], youso_s[k], youso_e[k]];
