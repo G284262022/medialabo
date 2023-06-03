@@ -221,6 +221,7 @@ function showResult(resp) {
         youso_t[k1] = title;
         k1++;
       }
+      console.log(youso_t);
       k1 = 0;
       for(let {start_time} of data.list.g1){
         youso_s[k1] = start_time;
@@ -234,6 +235,7 @@ function showResult(resp) {
       for(let {title} of data.list.e1){
         youso_t[k1] = title;
       }
+      console.log(youso_t);
       k1 = 0;
       for(let {start_time} of data.list.e1){
         youso_s[k1] = start_time;
