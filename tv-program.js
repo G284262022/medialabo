@@ -229,15 +229,18 @@ function showResult(resp) {
       }
       for(let {start_time} of data.list.g1){
         youso_s[k1] = start_time;
+        k1++;
       }
       k1 = 0;
       for(let {end_time} of data.list.g1){
         youso_e[k1] = end_time;
+        k1++;
       }
       console.log(youso_s);
   } else if(service === 'e1'){
       for(let {title} of data.list.e1){
         youso_t[k1] = title;
+        k1++;
       }
       console.log(youso_t);
       k1 = 0;
@@ -247,10 +250,12 @@ function showResult(resp) {
       }
       for(let {start_time} of data.list.e1){
         youso_s[k1] = start_time;
+        k1++;
       }
       k1 = 0;
       for(let {end_time} of data.list.e1){
         youso_e[k1] = end_time;
+        k1++;
       }
       console.log(youso_s);
   }
