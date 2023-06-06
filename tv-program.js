@@ -82,7 +82,7 @@ let data = {
   /////////////////// 課題3-2 はここから書き始めよう
   
   let p = document.querySelector('button#request');
-p.addEventListener('click', showSelectResult);
+  p.addEventListener('click', showSelectResult);
 
 function showSelectResult() {
   let s = document.querySelector('select#service');
@@ -117,22 +117,6 @@ function showSelectResult() {
       .catch(showError)   // 通信失敗
       .then(finish);      // 通信の最後の処理
 }
-/*
-let b = document.querySelector('#request');
-b.addEventListener('click', sendRequest);
-
-// 通信を開始する処理
-function sendRequest() {
-  // URL を設定
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + service + '-' + genre + '-j.json';
-
-  // 通信開始
-  axios.get(url)
-      .then(showResult)   // 通信成功
-      .catch(showError)   // 通信失敗
-      .then(finish);      // 通信の最後の処理
-}
-*/
 // 通信が成功した時の処理
 function showResult(resp) {
   // サーバから送られてきたデータを出力
@@ -156,9 +140,22 @@ function showResult(resp) {
 
   let s1 = document.querySelector('select#genre');
   let idx1 = s1.selectedIndex;  // idx 番目の option が選択された
+
+  var sss = ['','0000','0100','0205','0300','0409','0502','0600','0700','0800','0903','1000','1100'];
+  let genre = sss[idx1];
+
   let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
   let o1 = os1.item(idx1);       // os の idx 番目の要素
 
+  if (service === 'g1' && genre === '0600' ||
+      service === 'g1' && genre === '0903' ||
+      service === 'g1' && genre === '1100' ||
+      service === 'e1' && genre === '0100' ||
+      service === 'e1' && genre === '0600' ||
+      service === 'e1' && genre === '0903' ||
+      service === 'e1' && genre === '1000'){
+        console.log("データがありません");
+  } else {
   let count = 0;
   if (service === 'g1'){
     for(let {title} of data.list.g1){
@@ -172,30 +169,7 @@ function showResult(resp) {
       count = count + 1;
     }
     console.log(count);
-  }/*
-  if (service === 'g1'){
-    for(let {start_time} of data.list.g1){
-      console.log(start_time);
-    }
-  } else if(service === 'e1'){
-    for(let {start_time} of data.list.e1){
-      console.log(start_time);
-    }
   }
-  let counts = 0;
-  if (service === 'g1'){
-    for(let {end_time} of data.list.g1){
-      console.log(end_time);
-      counts = counts + 1;
-    }
-    console.log(count);
-  } else if(service === 'e1'){
-    for(let {end_time} of data.list.e1){
-      console.log(end_time);
-      counts = counts + 1;
-    }
-    console.log(count);
-  }*/
   let ban = document.querySelector('th#kyoku');
   ban.textContent = o.textContent;
   let daimei = document.querySelector('th#title');
@@ -260,9 +234,6 @@ function showResult(resp) {
       console.log(youso_s);
   }
   var youso;
-  /*for (var k = 0; k < count; k++){
-    youso = [youso_t[k], youso_s[k], youso_e[k]];
-  }*/
   youso = [youso_t, youso_s, youso_e];
   // すべてのセルを作成
   for (var i = 0; i < count+1; i++) {
@@ -294,11 +265,11 @@ function showResult(resp) {
     // 表の本体の末尾に行を追加
     tblBody.appendChild(row);
   }
-
   // <tbody> を <table> の中に追加
   tbl.appendChild(tblBody);
   // <table> を <body> の中に追加
   body.appendChild(tbl);
+  }
 }
 
 // 通信エラーが発生した時の処理
@@ -310,4 +281,3 @@ function showError(err) {
 function finish() {
   console.log('Ajax 通信が終わりました');
 }
-//https://www.nishita-lab.org/web-contents/jsons/nhk/{service}-{genre}-j.json
