@@ -39,7 +39,7 @@ div#sub {
 	grid-auto-rows: 300px 300px;
 	grid-gap: 10px;
 	padding: 5px 5px 5px 5px;
-	width: 2000px;
+	width: 1500px;
 }
 
 div#sub > div {
