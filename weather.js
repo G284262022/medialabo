@@ -56,3 +56,8 @@ console.log(data.main.humidity);
 console.log(data.wind.speed);
 console.log(data.wind.deg);
 console.log(data.name);
+let r = document.querySelector('div#result');
+let p1=document.createElement('p');
+let pp1=data.coord.lon;
+p1.textContent=pp1;
+r.insertAdjacentElement('beforeend', p1);
